@@ -14,8 +14,8 @@ from dataclasses import field
 
 
 #: Field types a declaration may name. A field naming anything else is refused
-#: at parse time. `labeled` predates this and still falls back to TEXT, which is
-#: an inconsistency recorded in the roadmap rather than fixed here.
+#: at parse time. `labeled` predates this and still falls back to TEXT, a known
+#: inconsistency left alone rather than fixed silently.
 FIELD_TYPES: tuple[str, ...] = ("String", "Path", "Int", "Integer", "UUID")
 
 #: Column names the generators produce for every vertex set, which a declared
