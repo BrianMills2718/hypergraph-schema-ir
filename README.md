@@ -129,7 +129,7 @@ control for each constraint state.
 ## Writeup
 
 [Hypergraphs as an intermediate representation for schema
-translation](https://brian-mills.dev) — the longer argument, with figures.
+translation](https://medium.com/@brianmills2718/hypergraphs-as-an-intermediate-representation-for-schema-translation-2bfec08670e8) — the longer argument, with figures.
 
 ## License
 
