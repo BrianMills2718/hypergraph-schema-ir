@@ -1,0 +1,21 @@
+# Control (a): provably connected. Every declared vertex set participates in at
+# least one hyperedge, and all four lie in one component.
+#   users  -- friendships, memberships, authorship
+#   groups -- memberships, group_events
+#   posts  -- authorship
+#   events -- group_events
+system ConnectedControl {
+    vertices users: User labeled String
+    vertices groups: Group labeled String
+    vertices posts: Post labeled String
+    vertices events: Event labeled String
+
+    hyperedges friendships: connect User User
+    hyperedges memberships: connect User Group
+    hyperedges authorship: connect User Post
+    hyperedges group_events: connect Group Event
+}
+
+constraints {
+    connected
+}

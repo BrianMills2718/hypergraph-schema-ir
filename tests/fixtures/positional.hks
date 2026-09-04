@@ -1,0 +1,10 @@
+# A hyperedge whose endpoints are positional, with no declared roles.
+system Positional {
+    vertices users: User labeled String
+
+    hyperedges pairs: connect User User
+}
+
+constraints {
+    connected
+}

@@ -1,0 +1,24 @@
+# A social network with one genuinely hyper edge: group_interactions connects
+# three vertex sets at once, which is the thing a plain graph cannot express.
+system SocialNetwork {
+    vertices users: User labeled String
+    vertices groups: Group labeled String
+    vertices posts: Post labeled String
+
+    hyperedges friendships: connect User User
+    hyperedges memberships: connect User Group
+    hyperedges authorship: connect User Post
+    hyperedges group_interactions: connect User User Group
+}
+
+constraints {
+    uniform(2)
+    directed
+    connected
+}
+
+operations {
+    getFriends(user: User): List {
+        traverse(user)
+    }
+}

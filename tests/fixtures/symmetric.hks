@@ -1,0 +1,12 @@
+# A peer relation: the two User participants are interchangeable.
+system Peers {
+    vertices users:  User  labeled String
+    vertices groups: Group labeled String
+
+    hyperedges friendships: connect a:User b:User symmetric(a, b)
+    hyperedges memberships: connect member:User venue:Group
+}
+
+constraints {
+    connected
+}

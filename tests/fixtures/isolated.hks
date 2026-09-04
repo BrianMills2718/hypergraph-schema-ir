@@ -1,0 +1,17 @@
+# Control (b): the minimally-mutated twin of connected.hks. Exactly one edit:
+# the `group_events` hyperedge is removed, so `events` participates in no
+# hyperedge and is provably isolated. Everything else is byte-identical.
+system ConnectedControl {
+    vertices users: User labeled String
+    vertices groups: Group labeled String
+    vertices posts: Post labeled String
+    vertices events: Event labeled String
+
+    hyperedges friendships: connect User User
+    hyperedges memberships: connect User Group
+    hyperedges authorship: connect User Post
+}
+
+constraints {
+    connected
+}

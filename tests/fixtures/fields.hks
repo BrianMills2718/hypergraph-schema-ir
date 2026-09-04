@@ -1,0 +1,15 @@
+# A vertex set with declared fields, beside one without.
+system Catalog {
+    vertices users: User labeled String {
+        email: String
+        age: Int
+        bio: String?
+    }
+    vertices groups: Group labeled String
+
+    hyperedges memberships: connect member:User venue:Group
+}
+
+constraints {
+    connected
+}

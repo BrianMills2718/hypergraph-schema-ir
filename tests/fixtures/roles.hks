@@ -1,0 +1,11 @@
+# A ternary hyperedge whose two User participants are distinct roles.
+system Interactions {
+    vertices users:  User  labeled String
+    vertices groups: Group labeled String
+
+    hyperedges group_interactions: connect actor:User target:User venue:Group
+}
+
+constraints {
+    connected
+}

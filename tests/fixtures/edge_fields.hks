@@ -1,0 +1,15 @@
+# A relationship that carries its own attributes, beside one that does not.
+system Employment {
+    vertices people:    Person  labeled String
+    vertices companies: Company labeled String
+
+    hyperedges employment: connect person:Person company:Company {
+        salary: Int
+        started: String?
+    }
+    hyperedges rivalry: connect a:Company b:Company symmetric(a, b)
+}
+
+constraints {
+    connected
+}
