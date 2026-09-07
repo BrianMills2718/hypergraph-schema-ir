@@ -14,6 +14,18 @@ pip install -e .
 knowledgework translate examples/social-network.hks --out generated/
 ```
 
+**Part of a wider research cluster.** This repo and
+[`factgraph`](https://github.com/BrianMills2718/factgraph) are the same
+lineage — factgraph is the Project Graph's declared design successor, which
+kept the audit question (which modelling rules survive a transform) and cut
+most of the rest after finding it already exists in ORM/LinkML/Object-Role-
+Modeling tooling. Both sit inside a wider cluster on canonical semantic
+representation and capability reuse for AI-generated software. For current
+state, open cross-repo decisions, and how these repos relate, see the
+baseline synthesis page in
+[`BrianMills2718/vision`](https://github.com/BrianMills2718/vision):
+[`wiki/synthesis/ontology-semantic-cluster-baseline-2026-09-07.md`](https://github.com/BrianMills2718/vision/blob/main/wiki/synthesis/ontology-semantic-cluster-baseline-2026-09-07.md).
+
 ## The point
 
 A binary graph cannot state a three-way fact as one edge, so it invents a node
